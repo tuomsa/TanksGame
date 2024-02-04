@@ -380,6 +380,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 211f6778656b1de469a5f11e281ac6ab, type: 2}
+    - target: {fileID: -4718040791104185828, guid: c2f7c72a61dc49141bf203cbd71d522b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 211f6778656b1de469a5f11e281ac6ab, type: 2}
     - target: {fileID: -4683669308469848369, guid: c2f7c72a61dc49141bf203cbd71d522b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -408,6 +412,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 211f6778656b1de469a5f11e281ac6ab, type: 2}
+    - target: {fileID: 3280927520727180574, guid: c2f7c72a61dc49141bf203cbd71d522b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 211f6778656b1de469a5f11e281ac6ab, type: 2}
     - target: {fileID: 6944656104360116776, guid: c2f7c72a61dc49141bf203cbd71d522b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -420,6 +428,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0d531504ea62e1646be57f6be44e3d43, type: 2}
+    - target: {fileID: 8089062573417005363, guid: c2f7c72a61dc49141bf203cbd71d522b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 211f6778656b1de469a5f11e281ac6ab, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -430,6 +442,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c2f7c72a61dc49141bf203cbd71d522b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1840064905}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c2f7c72a61dc49141bf203cbd71d522b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1840064906}
   m_SourcePrefab: {fileID: 100100000, guid: c2f7c72a61dc49141bf203cbd71d522b, type: 3}
 --- !u!4 &1840064903 stripped
 Transform:
@@ -456,6 +471,27 @@ MonoBehaviour:
   speed: 30
   bulletPrefab: {fileID: 929709167329855507, guid: 7097d3b59974ab04282a403057b90f5a, type: 3}
   bulletSpawnPoint: {fileID: 2101518074}
+--- !u!65 &1840064906
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840064904}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1907133127
 GameObject:
   m_ObjectHideFlags: 0
