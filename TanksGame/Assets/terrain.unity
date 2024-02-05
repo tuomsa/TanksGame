@@ -328,7 +328,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -9015345870174836183, guid: 2db82cfced445be4bacb7231a450a525, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2db82cfced445be4bacb7231a450a525, type: 3}
       propertyPath: m_LocalScale.x
@@ -392,7 +392,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ee47644675828514c8b999edaa99ee59, type: 2}
     - target: {fileID: -4503666473972279669, guid: 2db82cfced445be4bacb7231a450a525, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3587263337289480095, guid: 2db82cfced445be4bacb7231a450a525, type: 3}
       propertyPath: m_CastShadows
@@ -408,11 +408,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3a00b84d9284d254080983707c886839, type: 2}
     - target: {fileID: -2430580109419823543, guid: 2db82cfced445be4bacb7231a450a525, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 603849594992467974, guid: 2db82cfced445be4bacb7231a450a525, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2db82cfced445be4bacb7231a450a525, type: 3}
       propertyPath: m_Name
