@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -395,6 +395,9 @@ PrefabInstance:
     - {fileID: -8700617353114198275, guid: 2db82cfced445be4bacb7231a450a525, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2db82cfced445be4bacb7231a450a525, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1708944733}
     - targetCorrespondingSourceObject: {fileID: 3823007940259442730, guid: 2db82cfced445be4bacb7231a450a525, type: 3}
       insertIndex: -1
       addedObject: {fileID: 605634560}
@@ -498,6 +501,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1708944731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2db82cfced445be4bacb7231a450a525, type: 3}
+  m_PrefabInstance: {fileID: 648917983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1708944733
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708944731}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.59, z: 8.21}
+  m_Center: {x: 0.03, y: 1.72, z: 0}
 --- !u!1 &1907133127
 GameObject:
   m_ObjectHideFlags: 0
