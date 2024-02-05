@@ -168,6 +168,9 @@ MonoBehaviour:
   openHeight: -2
   closeHeight: 24
   moveSpeed: 5
+  redMaterial: {fileID: 2100000, guid: 8f190e7a7cd297742b622b9b400834ff, type: 2}
+  greenMaterial: {fileID: 2100000, guid: 2fbcd20ee695a4643b38a49873a1eef7, type: 2}
+  bulbRenderer: {fileID: 1134248005}
 --- !u!1001 &648917983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -270,6 +273,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 605634560}
   m_SourcePrefab: {fileID: 100100000, guid: 2db82cfced445be4bacb7231a450a525, type: 3}
+--- !u!23 &1134248005 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -8226214312440802033, guid: 2db82cfced445be4bacb7231a450a525, type: 3}
+  m_PrefabInstance: {fileID: 648917983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1221899648
 GameObject:
   m_ObjectHideFlags: 0
