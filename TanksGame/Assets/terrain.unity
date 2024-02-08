@@ -3781,8 +3781,10 @@ MonoBehaviour:
   leftTrack: {fileID: 0}
   rightTrack: {fileID: 0}
   trackSpeed: 300
-  moveSpeed: 30
+  maxMoveSpeed: 30
   turnSpeed: 50
+  acceleration: 5
+  maxUphillAngle: 30
 --- !u!65 &9151424761562996779
 BoxCollider:
   m_ObjectHideFlags: 0
