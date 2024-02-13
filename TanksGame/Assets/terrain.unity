@@ -1555,7 +1555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 929709167329855507, guid: 7097d3b59974ab04282a403057b90f5a, type: 3}
   bulletSpawnPoint: {fileID: 825076675}
-  bulletSpeed: 100
+  bulletSpeed: 180
 --- !u!4 &1602094924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4955382505210009348, guid: 84399929d62cdcd48aa9c7e8df2752c0, type: 3}
@@ -1603,7 +1603,7 @@ Transform:
   m_GameObject: {fileID: 1690315589}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1311.5813, y: 92.77, z: 307.9913}
+  m_LocalPosition: {x: 1311.5813, y: 90, z: 307.9913}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5238,7 +5238,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 846.4187, y: 0.46, z: 468.10867}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.2, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1690315590}
