@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7237371893258341801}
   - component: {fileID: 1113002151698680348}
   - component: {fileID: 4094798801255978342}
-  - component: {fileID: -2324066580340564669}
   - component: {fileID: 7959641634614214683}
   - component: {fileID: -5546084242606759634}
   m_Layer: 0
@@ -108,20 +107,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-2324066580340564669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929709167329855507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c9ca5d19f6d3b4438f0e3d5911134f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  barrelEnd: {fileID: 0}
-  projectilePrefab: {fileID: 0}
 --- !u!54 &7959641634614214683
 Rigidbody:
   m_ObjectHideFlags: 0
