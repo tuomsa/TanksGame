@@ -32,11 +32,21 @@ public class Shooting : MonoBehaviour
             // Aktivoi partikkeliefektit
             if (muzzleFlashEffect != null)
             {
-                Instantiate(muzzleFlashEffect, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+                var muzzleFlashInstance = Instantiate(muzzleFlashEffect, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+                var muzzleFlashParticleSystem = muzzleFlashInstance.GetComponent<ParticleSystem>();
+                if (muzzleFlashParticleSystem != null)
+                {
+                    muzzleFlashParticleSystem.Play();
+                }
             }
             if (cannonFireEffect != null)
             {
-                Instantiate(cannonFireEffect, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+                var cannonFireInstance = Instantiate(cannonFireEffect, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+                var cannonFireParticleSystem = cannonFireInstance.GetComponent<ParticleSystem>();
+                if (cannonFireParticleSystem != null)
+                {
+                    cannonFireParticleSystem.Play();
+                }
             }
         }
         else
@@ -44,4 +54,5 @@ public class Shooting : MonoBehaviour
             Debug.LogWarning("Bullet prefab does not have a Rigidbody component.");
         }
     }
+
 }
