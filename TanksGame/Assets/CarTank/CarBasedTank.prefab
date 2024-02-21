@@ -5748,15 +5748,13 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
+  m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
-  m_UseCustomVertexStreams: 0
   m_VertexStreams: 0001030405
-  m_UseCustomTrailVertexStreams: 0
-  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -6909,7 +6907,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6965964933651483906}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ea65b38d485c374caa584a03f1de571, type: 3}
   m_Name: 
@@ -9669,8 +9667,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 929709167329855507, guid: 7097d3b59974ab04282a403057b90f5a, type: 3}
   bulletSpawnPoint: {fileID: 7650357448616493015}
   bulletSpeed: 100
-  muzzleFlashEffect: {fileID: 0}
-  cannonFireEffect: {fileID: 0}
 --- !u!114 &3486890891420909979
 MonoBehaviour:
   m_ObjectHideFlags: 0
