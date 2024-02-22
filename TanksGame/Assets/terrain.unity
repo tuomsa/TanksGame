@@ -219,6 +219,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &183181473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183181468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781e31332055b4e4ab74546b02de8d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  playerBulletPrefab: {fileID: 929709167329855507, guid: 7097d3b59974ab04282a403057b90f5a, type: 3}
+  damageTaken: 20
+--- !u!65 &183181474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183181468}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.581482, y: 3.7056096, z: 5.8714905}
+  m_Center: {x: -0.12680054, y: 1.3528048, z: -0.39259338}
 --- !u!1 &210674936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2662526422056665024, guid: 16ac732b58c8753419a01038b1642b0d, type: 3}
@@ -837,53 +873,12 @@ Transform:
   m_GameObject: {fileID: 538803317}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 778.6, y: 3.425, z: 171.5}
+  m_LocalPosition: {x: 773.71, y: 2.278, z: 173.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &547748392 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1484189017646476148, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
-  m_PrefabInstance: {fileID: 1173562594}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &547748396
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547748392}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.267029, y: 3.0000563, z: 8.842467}
-  m_Center: {x: 0.079437256, y: 1.5000148, z: -0.22359848}
---- !u!114 &547748397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547748392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 781e31332055b4e4ab74546b02de8d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  playerBulletPrefab: {fileID: 929709167329855507, guid: 7097d3b59974ab04282a403057b90f5a, type: 3}
-  damageTaken: 20
 --- !u!4 &549086183 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4508696319873668, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
@@ -2065,12 +2060,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3353501808085126717, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
       insertIndex: -1
       addedObject: {fileID: 183181471}
-    - targetCorrespondingSourceObject: {fileID: 1484189017646476148, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 3353501808085126717, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 547748396}
-    - targetCorrespondingSourceObject: {fileID: 1484189017646476148, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
+      addedObject: {fileID: 183181474}
+    - targetCorrespondingSourceObject: {fileID: 3353501808085126717, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 547748397}
+      addedObject: {fileID: 183181473}
   m_SourcePrefab: {fileID: 100100000, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
 --- !u!1 &1221899648
 GameObject:
