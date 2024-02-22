@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5546084242606759634}
   - component: {fileID: 6704892528145119980}
   m_Layer: 0
-  m_Name: Ammus
+  m_Name: EnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
