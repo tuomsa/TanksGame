@@ -14,6 +14,8 @@ public class EnemyAI : MonoBehaviour
     private float nextFireTime = 0f; // Time when the enemy can fire next
     private int currentHealth = 100; // Maximum health of the enemy
 
+    public float minDistanceToPlayer = 3f; // Minimum distance the enemy should keep from the player (modifiable)
+
     private int currentPatrolPointIndex = 0;
     private bool isChasing = false;
 
@@ -56,8 +58,18 @@ public class EnemyAI : MonoBehaviour
 
     void Chase()
     {
-        transform.position = Vector3.MoveTowards(transform.position, player.position, chaseSpeed * Time.deltaTime);
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+        if (distanceToPlayer > minDistanceToPlayer)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.position, chaseSpeed * Time.deltaTime);
+        }
+        else
+        {
+            // Move away from the player
+            Vector3 moveDirection = (transform.position - player.position).normalized;
+            transform.position += moveDirection * chaseSpeed * Time.deltaTime;
+        }
 
         if (distanceToPlayer <= attackRange)
         {
