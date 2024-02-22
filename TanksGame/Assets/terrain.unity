@@ -249,7 +249,7 @@ MonoBehaviour:
   shootPoint: {fileID: 946452378}
   patrolSpeed: 10
   chaseSpeed: 12
-  attackRange: 60
+  attackRange: 100
   bulletSpeed: 100
   fireRate: 1
   minDistanceToPlayer: 10
@@ -272,7 +272,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 60
+  m_Radius: 100
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &210674936 stripped
 GameObject:
@@ -3184,7 +3184,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 60
+  m_Radius: 100
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1365291715
 BoxCollider:
@@ -3255,7 +3255,7 @@ MonoBehaviour:
   shootPoint: {fileID: 1989268808}
   patrolSpeed: 10
   chaseSpeed: 12
-  attackRange: 60
+  attackRange: 100
   bulletSpeed: 100
   fireRate: 1
   minDistanceToPlayer: 10
@@ -3754,7 +3754,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 60
+  m_Radius: 100
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1753642764
 BoxCollider:
@@ -3825,7 +3825,7 @@ MonoBehaviour:
   shootPoint: {fileID: 834111428}
   patrolSpeed: 10
   chaseSpeed: 12
-  attackRange: 60
+  attackRange: 100
   bulletSpeed: 100
   fireRate: 1
   minDistanceToPlayer: 10
