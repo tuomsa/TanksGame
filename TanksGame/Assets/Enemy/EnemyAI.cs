@@ -39,22 +39,26 @@ public class EnemyAI : MonoBehaviour
     }
 
     void Patrol()
+{
+    Transform currentPatrolPoint = patrolPoints[currentPatrolPointIndex];
+    float distance = Vector3.Distance(transform.position, currentPatrolPoint.position);
+
+    if (distance < 0.1f)
     {
-        Transform currentPatrolPoint = patrolPoints[currentPatrolPointIndex];
-        float distance = Vector3.Distance(transform.position, currentPatrolPoint.position);
+        currentPatrolPointIndex = (currentPatrolPointIndex + 1) % patrolPoints.Length;
+    }
 
-        if (distance < 0.1f)
-        {
-            currentPatrolPointIndex = (currentPatrolPointIndex + 1) % patrolPoints.Length;
-        }
-
-        transform.position = Vector3.MoveTowards(transform.position, currentPatrolPoint.position, patrolSpeed * Time.deltaTime);
-
-        // Rotate towards next patrol point
+    // Calculate patrol direction only if distance is non-zero
+    if (distance > 0.01f)
+    {
         Vector3 patrolDirection = (currentPatrolPoint.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(patrolDirection.x, 0, patrolDirection.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
+
+    transform.position = Vector3.MoveTowards(transform.position, currentPatrolPoint.position, patrolSpeed * Time.deltaTime);
+}
+
 
     void Chase()
     {
