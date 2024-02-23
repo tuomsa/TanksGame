@@ -7,14 +7,14 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 1000;
     private int currentHealth;
     public Slider healthSlider;
-    public TextMeshProUGUI healthText; // Lis‰tty viite Text-komponenttiin
+    public TextMeshProUGUI healthText; 
 
     void Start()
     {
         currentHealth = maxHealth;
         healthSlider.maxValue = maxHealth;
         healthSlider.value = currentHealth;
-        UpdateHealthText(); // P‰ivit‰ teksti alussa
+        UpdateHealthText(); 
     }
 
     void UpdateHealthText()
@@ -27,11 +27,10 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= amount;
         healthSlider.value = currentHealth;
-        UpdateHealthText(); // P‰ivit‰ teksti vahingon ottamisen j‰lkeen
+        UpdateHealthText(); 
 
         if (currentHealth <= 0)
         {
-            // Pelaaja on kuollut.
             Debug.Log("Player is dead!");
         }
     }
@@ -39,7 +38,21 @@ public class PlayerHealth : MonoBehaviour
     public void Heal(int amount)
     {
         currentHealth += amount;
+        if (currentHealth > maxHealth)
+            currentHealth = maxHealth;
+        
         healthSlider.value = currentHealth;
-        UpdateHealthText(); // P‰ivit‰ teksti parantumisen j‰lkeen
+        UpdateHealthText(); 
+    }
+
+    //  OnTriggerEnter-metodi, joka kutsuu TakeDamage-metodia kun pelaaja osuu vihollisen luotiin
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("EnemyBullet"))
+        {
+            // Ota vahinkoa vihollisen luodista
+            int damageAmount = 10; // Voit s√§√§t√§√§ vahingon m√§√§r√§√§ tarpeen mukaan
+            TakeDamage(damageAmount);
+        }
     }
 }
