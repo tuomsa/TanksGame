@@ -20193,7 +20193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1a9ff47017c2e4b9ee5c3a49ca6d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 100
   healthSlider: {fileID: 496706708}
   healthText: {fileID: 1287441723}
 --- !u!65 &8936282174405250493
