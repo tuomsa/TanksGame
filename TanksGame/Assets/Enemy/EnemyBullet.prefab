@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7959641634614214683}
   - component: {fileID: -5546084242606759634}
   - component: {fileID: 6704892528145119980}
+  - component: {fileID: -2139805918207544097}
   m_Layer: 6
   m_Name: EnemyBullet
   m_TagString: EnemyBullet
@@ -261,3 +262,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
+--- !u!114 &-2139805918207544097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929709167329855507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf2c62b70e847640aaf205c8726557f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSound: {fileID: 8300000, guid: cf03b6e655d5940438bcfbeef5843509, type: 3}
+  destructionSound: {fileID: 8300000, guid: 5817bea8ea3393c4ea0cde4021759de9, type: 3}

@@ -15,6 +15,10 @@ public class EnemyAI : MonoBehaviour
     private int currentHealth = 100; // Maximum health of the enemy
 
     public float minDistanceToPlayer = 3f; // Minimum distance the enemy should keep from the player (modifiable)
+    public GameObject explosionPrefab;
+    public GameObject enemyPrefabToDestroy;
+    public AudioClip destructionSound;
+    
 
     private int currentPatrolPointIndex = 0;
     private bool isChasing = false;
@@ -143,6 +147,13 @@ public class EnemyAI : MonoBehaviour
     void Defeated()
     {
         Debug.Log("Enemy defeated!");
-        Destroy(gameObject); // Destroy the enemy GameObject
+
+       
+        Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
+
+        Destroy(gameObject);
+        
     }
+     
 }
+

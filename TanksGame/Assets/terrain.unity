@@ -249,10 +249,13 @@ MonoBehaviour:
   shootPoint: {fileID: 946452378}
   patrolSpeed: 10
   chaseSpeed: 12
-  attackRange: 100
+  attackRange: 150
   bulletSpeed: 100
   fireRate: 1
-  minDistanceToPlayer: 10
+  minDistanceToPlayer: 30
+  explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  enemyPrefabToDestroy: {fileID: 183181468}
+  destructionSound: {fileID: 8300000, guid: 5817bea8ea3393c4ea0cde4021759de9, type: 3}
 --- !u!135 &183181477
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -272,7 +275,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 100
+  m_Radius: 150
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &210674936 stripped
 GameObject:
@@ -1659,6 +1662,18 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5191147665771227151, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191147665771227151, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191147665771227151, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191147665771227151, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 454.2
       objectReference: {fileID: 0}
@@ -2246,6 +2261,18 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5191147665771227151, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191147665771227151, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191147665771227151, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191147665771227151, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 421
       objectReference: {fileID: 0}
@@ -2466,7 +2493,7 @@ Transform:
   m_GameObject: {fileID: 1091372048}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 266.7, y: 64.83774, z: -25.9}
+  m_LocalPosition: {x: 266.7, y: 65.8, z: -25.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2543,6 +2570,18 @@ PrefabInstance:
     - target: {fileID: 3353501808085126717, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191147665771227151, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191147665771227151, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191147665771227151, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5191147665771227151, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2706,6 +2745,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1230986522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1230986524}
+  - component: {fileID: 1230986523}
+  m_Layer: 0
+  m_Name: CheckPlayerDestroy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1230986523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230986522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56757fdd2fe58ec4ab4f6a40245fc71b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7744463407520121187}
+  restartDelay: 5
+--- !u!4 &1230986524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230986522}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 257.35974, y: 144.32298, z: 726.5717}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1237112909
 GameObject:
   m_ObjectHideFlags: 0
@@ -3319,7 +3404,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 100
+  m_Radius: 150
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1365291715
 BoxCollider:
@@ -3390,10 +3475,13 @@ MonoBehaviour:
   shootPoint: {fileID: 1989268808}
   patrolSpeed: 10
   chaseSpeed: 12
-  attackRange: 100
+  attackRange: 150
   bulletSpeed: 100
   fireRate: 1
   minDistanceToPlayer: 10
+  explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  enemyPrefabToDestroy: {fileID: 1365291713}
+  destructionSound: {fileID: 8300000, guid: 5817bea8ea3393c4ea0cde4021759de9, type: 3}
 --- !u!4 &1365291718 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5191147665771227151, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
@@ -4100,6 +4188,98 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2.92, z: 3.21}
   m_Center: {x: 0.03, y: 1.72, z: 3.4}
+--- !u!1 &1722103393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1722103394}
+  - component: {fileID: 1722103396}
+  - component: {fileID: 1722103395}
+  m_Layer: 0
+  m_Name: DeathCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1722103394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722103393}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.110044554, y: 0.20780921, z: 0.03452307, w: 0.9713463}
+  m_LocalPosition: {x: -2.7799969, y: 4.109999, z: -11.58}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2909123979785661489}
+  m_LocalEulerAnglesHint: {x: 11.504, y: 24.818, z: 6.61}
+--- !u!81 &1722103395
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722103393}
+  m_Enabled: 0
+--- !u!20 &1722103396
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722103393}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &1753642762 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3353501808085126717, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
@@ -4124,7 +4304,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 100
+  m_Radius: 150
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1753642764
 BoxCollider:
@@ -4195,10 +4375,13 @@ MonoBehaviour:
   shootPoint: {fileID: 834111428}
   patrolSpeed: 10
   chaseSpeed: 12
-  attackRange: 100
+  attackRange: 150
   bulletSpeed: 100
   fireRate: 1
   minDistanceToPlayer: 10
+  explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  enemyPrefabToDestroy: {fileID: 1753642762}
+  destructionSound: {fileID: 8300000, guid: 5817bea8ea3393c4ea0cde4021759de9, type: 3}
 --- !u!4 &1753642767 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5191147665771227151, guid: 9f64ceb0ecd20a54eb5a7385eedbaaea, type: 3}
@@ -16115,7 +16298,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.0025936742, y: 0.9318368, z: -0.006641847, w: 0.3628077}
   m_LocalPosition: {x: 279.61026, y: 128.96217, z: 776.28687}
-  m_LocalScale: {x: 1.5, y: 1.2, z: 1.5}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5535955587722049195}
@@ -16125,6 +16308,7 @@ Transform:
   - {fileID: 2360063915129060474}
   - {fileID: 1356744516060852778}
   - {fileID: 4039663381797828894}
+  - {fileID: 1722103394}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 137.452, z: 0}
 --- !u!1 &2977414209899135409
@@ -20701,6 +20885,8 @@ MonoBehaviour:
   maxHealth: 100
   healthSlider: {fileID: 496706708}
   healthText: {fileID: 1287441723}
+  prefabToDestroy: {fileID: 7744463407520121187}
+  explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
 --- !u!65 &8936282174405250493
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21037,3 +21223,4 @@ SceneRoots:
   - {fileID: 875350079}
   - {fileID: 673457960}
   - {fileID: 859992771}
+  - {fileID: 1230986524}

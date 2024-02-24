@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour
     private int currentHealth;
     public Slider healthSlider;
     public TextMeshProUGUI healthText; 
+    public GameObject prefabToDestroy;
+    public GameObject explosionPrefab;
 
     void Start()
     {
@@ -32,6 +34,8 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log("Player is dead!");
+            Instantiate(explosionPrefab, prefabToDestroy.transform.position, Quaternion.identity);
+            Destroy(prefabToDestroy);
         }
     }
 
