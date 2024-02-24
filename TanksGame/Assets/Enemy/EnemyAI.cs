@@ -148,7 +148,7 @@ public class EnemyAI : MonoBehaviour
     {
         Debug.Log("Enemy defeated!");
 
-       
+        GameController.instance.EnemyDestroyed();
         Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
 
         Destroy(gameObject);
