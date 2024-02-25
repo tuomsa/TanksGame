@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class TankDestruction : MonoBehaviour
 {
-    public float threshold = 0.5f; // Kynnysarvo, joka määrittää, mikä katsotaan "ylösalaisin" olemiseksi
+    public float threshold = 0.5f; // Kynnysarvo
+    public GameObject explosionEffect; // Räjähdysvaikutus
 
     void Update()
     {
-        // Tarkista onko tankin y-akselin ylöspäin osoittava vektori osoittaa alaspäin.
         if (Vector3.Dot(transform.up, Vector3.down) > threshold)
         {
             DestroyTank();
@@ -15,10 +15,12 @@ public class TankDestruction : MonoBehaviour
 
     void DestroyTank()
     {
-        // Tuhotaan tankki ja tulostetaan viesti konsoliin.
+        if (explosionEffect != null)
+        {
+            Instantiate(explosionEffect, transform.position, transform.rotation);
+        }
+
         Debug.Log("Tank has been destroyed because it flipped over.");
         Destroy(gameObject);
-
-        // Tässä voit lisätä muita toimintoja, kuten räjähdysanimaatiota tai pisteiden laskua.
     }
 }
