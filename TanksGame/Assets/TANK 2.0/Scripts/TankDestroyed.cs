@@ -3,7 +3,8 @@ using UnityEngine;
 public class TankDestruction : MonoBehaviour
 {
     public float threshold = 0.5f; // Kynnysarvo
-    public GameObject explosionEffect; // Räjähdysvaikutus
+    public GameObject explosionEffect; // Rï¿½jï¿½hdysvaikutus
+    public GameObject destroyThis;
 
     void Update()
     {
@@ -21,6 +22,6 @@ public class TankDestruction : MonoBehaviour
         }
 
         Debug.Log("Tank has been destroyed because it flipped over.");
-        Destroy(gameObject);
+        Destroy(destroyThis);
     }
 }
