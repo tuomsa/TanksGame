@@ -26,6 +26,8 @@ public class BulletController : MonoBehaviour
         {
             // Play the destruction sound at the position of the bullet
             AudioSource.PlayClipAtPoint(destructionSound, transform.position);
+                    Destroy(gameObject);
+
         }
         else
         {
