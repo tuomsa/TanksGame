@@ -11,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
     public GameObject prefabToDestroy;
     public GameObject explosionPrefab;
 
+    bool isDestroyed = false;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -31,11 +33,12 @@ public class PlayerHealth : MonoBehaviour
         healthSlider.value = currentHealth;
         UpdateHealthText(); 
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !isDestroyed)
         {
             Debug.Log("Player is dead!");
             Instantiate(explosionPrefab, prefabToDestroy.transform.position, Quaternion.identity);
             Destroy(prefabToDestroy);
+            isDestroyed = true; 
         }
     }
 

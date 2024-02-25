@@ -87,7 +87,10 @@ namespace UnityStandardAssets.Vehicles.Car
         private void Update()
         {
             // get the distance to main camera
-            float camDist = (Camera.main.transform.position - transform.position).sqrMagnitude;
+           if (Camera.main != null) {
+    float camDist = (Camera.main.transform.position - transform.position).sqrMagnitude;
+    // Now use camDist as needed
+
 
             // stop sound if the object is beyond the maximum roll off distance
             if (m_StartedSound && camDist > maxRolloffDistance*maxRolloffDistance)
@@ -152,7 +155,7 @@ namespace UnityStandardAssets.Vehicles.Car
                     m_HighDecel.dopplerLevel = useDoppler ? dopplerLevel : 0;
                     m_LowDecel.dopplerLevel = useDoppler ? dopplerLevel : 0;
                 }
-            }
+            }}
         }
 
 
