@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class CrosshairManager : MonoBehaviour
+
+public class Crosshair : MonoBehaviour
 {
     public GameObject crosshair;
     public float sensitivity = 1f; // Sensitivity for mouse movement
@@ -8,14 +9,14 @@ public class CrosshairManager : MonoBehaviour
     private Vector3 lastMousePosition;
 
     void Start()
-    {
+    {  
         // Lock the cursor to the center of the screen
         Cursor.lockState = CursorLockMode.Locked;
         // Hide the cursor
         Cursor.visible = false;
 
         // Set the initial last mouse position to the center of the screen
-        lastMousePosition = new Vector3(Screen.width / 2f, Screen.height / 2f, 0);
+        lastMousePosition = new Vector3(Screen.width / 2f, Screen.height / 2f, 0); 
     }
 
     void Update()
