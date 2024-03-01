@@ -9,14 +9,17 @@ public class ShutterControl : MonoBehaviour
     public Material greenMaterial;
     public Renderer bulbRenderer;
 
-  [SerializeField] private AudioClip openSound;
-
+    [SerializeField] private AudioClip openSound;
+    [SerializeField] private AudioClip closeSound;
 
     private bool isOpening = false;
     private bool isClosing = false;
+    private AudioSource audioSource;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.loop = false;
     }
 
     void Update()
@@ -29,7 +32,7 @@ public class ShutterControl : MonoBehaviour
         isOpening = true;
         isClosing = false;
         SetBulbColor(greenMaterial);
-        SoundFXManager.instance.PlaySoundFXClip(openSound, transform, 1f);
+        PlaySound(openSound);
     }
 
     private void MoveShutter()
@@ -60,6 +63,15 @@ public class ShutterControl : MonoBehaviour
         if (bulbRenderer != null)
         {
             bulbRenderer.material = newMaterial;
+        }
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null && audioSource != null)
+        {
+            audioSource.clip = clip;
+            audioSource.Play();
         }
     }
 }
